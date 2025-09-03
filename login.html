@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="login-box">
+    <h2>Student Login</h2>
+    <form id="loginForm">
+      <div class="input-box">
+        <input type="text" id="name" required>
+        <label>Name</label>
+      </div>
+      <div class="input-box">
+        <input type="email" id="email" required>
+        <label>Email</label>
+      </div>
+
+      <!-- Class Select -->
+      <div class="select-box">
+        <label for="class">Class</label>
+        <select id="class" required>
+          <option value="">--Select Class--</option>
+          <option value="FY">FY</option>
+          <option value="SY">SY</option>
+          <option value="TY">TY</option>
+        </select>
+      </div>
+
+      <!-- Course Select -->
+      <div class="select-box">
+        <label for="course">Course</label>
+        <select id="course" required>
+          <option value="">--Select Course--</option>
+          <option value="BSc CS">BSc CS</option>
+          <option value="BSc IT">BSc IT</option>
+        </select>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="password" required>
+        <label>Password</label>
+      </div>
+      <!-- ===== OTP Login UI (paste inside <body>) ===== -->
+  
+    
+  <form id="loginForm" onsubmit="return false;">
+    <!-- Phone -->
+    <div class="input-box">
+      <input type="text" id="phone" placeholder="" maxlength="13" required>
+      <label>Phone Number</label>
+    </div>
+
+    <!-- Send OTP -->
+    <button type="button" class="btn" id="sendBtn" onclick="sendOTP()">Send OTP</button>
+
+    <!-- OTP -->
+    <div class="input-box" style="margin-top:12px;">
+      <input type="text" id="otp" placeholder="" maxlength="6" required>
+      <label>OTP</label>
+    </div>
+
+    <!-- Verify -->
+    <button type="button" class="btn" id="verifyBtn" onclick="verifyOTP()">Verify OTP</button>
+    <div>
+
+      <div class="input-box" style="margin-top:12px;"></div>
+  <button type="submit" class="btn">Login</button>
+</div>
+
+  </form>
+  <p id="result" style="margin-top:10px;"></p>
+</div>
+
+    <p id="result"></p>
+    </form>
+
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

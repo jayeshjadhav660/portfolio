@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f2027;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  overflow: hidden;
+}
+
+/* Bubble Background */
+.bubbles span {
+  position: absolute;
+  bottom: -50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+.bubbles span:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-duration: 8s; }
+.bubbles span:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-duration: 5s; }
+.bubbles span:nth-child(3) { left: 25%; width: 50px; height: 50px; animation-duration: 12s; }
+.bubbles span:nth-child(4) { left: 40%; width: 25px; height: 25px; animation-duration: 6s; }
+.bubbles span:nth-child(5) { left: 55%; width: 60px; height: 60px; animation-duration: 10s; }
+.bubbles span:nth-child(6) { left: 70%; width: 30px; height: 30px; animation-duration: 7s; }
+.bubbles span:nth-child(7) { left: 80%; width: 20px; height: 20px; animation-duration: 4s; }
+.bubbles span:nth-child(8) { left: 90%; width: 40px; height: 40px; animation-duration: 9s; }
+.bubbles span:nth-child(9) { left: 50%; width: 15px; height: 15px; animation-duration: 3s; }
+.bubbles span:nth-child(10) { left: 60%; width: 25px; height: 25px; animation-duration: 11s; }
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-800px) scale(0.5); opacity: 0; }
+}
+
+/* Login Box */
+.login-box {
+  position: relative;
+  width: 320px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: #fff;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+  color: #00e6e6;
+}
+
+.select-box {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.select-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.select-box select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #00e6e6;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-btn{
+  background: linear-gradient(135deg, #6a11cb, #777a7f);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popUp 0.8s ease;
+}
+
+/* Jab button load ho to pop-up */
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Hover effect */
+.next-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: #00b3b3;
+}
